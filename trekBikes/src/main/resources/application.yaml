@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    password: trekbikes
+    username: trekbikes
+    url: jdbc:mysql://localhost:3306/trekbikes
+    
+logging:
+  level:
+    root: warn
+    '[com.promineotech]': debug
