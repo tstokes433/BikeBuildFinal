@@ -2,7 +2,6 @@ package com.promineotech.trekbikes.dao;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -33,11 +32,10 @@ public class DefaultCreateBikeDao implements CreateBikeDao {
 		
 		// @formatter:off
 		String sql = ""
-				+ "INSERT INTO bike ("
-				+ "frameset_id, color_id, drivetrain_id, handlebar_id, saddle_id, tire_id"
+				+ "INSERT INTO bike (frameset_id, "
+				+ "color_id, drivetrain_id, handlebar_id, saddle_id, tire_id"
 				+ ") VALUES ("
-				+ ":frameset_id, :color_id, :drivetrain_id, :handlebar_id, :saddle_id, :tire_id"
-				+ ")";
+				+ ":frameset_id, :color_id, :drivetrain_id, :handlebar_id, :saddle_id, :tire_id);";
 		// @formatter:on
 		
 		Map<String, Object> params = new HashMap<>();

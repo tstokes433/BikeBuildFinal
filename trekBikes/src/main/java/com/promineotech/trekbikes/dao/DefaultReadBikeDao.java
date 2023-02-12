@@ -31,7 +31,7 @@ private NamedParameterJdbcTemplate jdbcTemplate;
 	@Override
 	
 	public List<Bike> fetchBike(Long bikeId, Frameset frameset, Color color, Drivetrain drivetrain, Handlebar handlebar, Saddle saddle, Tire tire) {
-//		log.info(bike, frameset, color, drivetrain, handlebar, saddle, tire);
+		log.info(null, frameset, color, drivetrain, handlebar, saddle, tire);
 
 	// @formatter:off
 	String sql = ""

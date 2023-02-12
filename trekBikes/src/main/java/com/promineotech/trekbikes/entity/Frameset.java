@@ -1,5 +1,5 @@
 package com.promineotech.trekbikes.entity;
 
 public enum Frameset {
-	Domane,Checkpoint,Emonda
+	Domane, Checkpoint, Emonda
 }

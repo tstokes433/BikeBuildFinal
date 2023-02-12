@@ -20,7 +20,7 @@ public class DefaultDeleteBikeDao implements DeleteBikeDao {
 	
 	@Override
 	public Bike deleteBike(Long bikeId) {
-
+		log.info(null);
 	//@ formatter:off
 	String sql = ""
 		+ "DELETE FROM bike "
