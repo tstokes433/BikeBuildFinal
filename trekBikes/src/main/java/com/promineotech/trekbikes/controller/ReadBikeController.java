@@ -66,52 +66,49 @@ public interface ReadBikeController {
 		
 			parameters = { 
 				@Parameter(
-						name = "frameset",  
+						name = "bikeId",  
 						required = false, 
-						description = "Frameset Needed for a Bike"),
-				@Parameter(
-						name = "color",  
-						required = false, 
-						description = "Color Needed for a Bike"),
-				@Parameter(
-						name = "drivetrain",  
-						required = false, 
-						description = "Drivetrain Needed for a Bike"),
-				@Parameter(
-						name = "handlebar",  
-						required = false, 
-						description = "Handlebar Needed for a Bike"),
-				@Parameter(
-						name = "saddle",  
-						required = false, 
-						description = "Saddle Needed for a Bike"),
-				@Parameter(
-						name = "tire",  
-						required = false, 
-						description = "Tires Needed for a Bike")
-				
+						description = "Returns a Bike"),
+			
 			}
+		
+				
+		
+			
 		)
 		@GetMapping(value = "/fetchTrekBikes")
 		@ResponseStatus(code = HttpStatus.OK)
 //		Order createOrder(@Valid @RequestBody OrderRequest orderRequest);
 
 		List<Bike> fetchBike(
+				//);
 				@RequestParam(required = false)
-				Frameset frameset,
-				@RequestParam(required = false)
-				Color color,
-				@RequestParam(required = false)
-				Drivetrain drivetrain,
-				@RequestParam(required = false)
-				Handlebar handlebar,
-				@RequestParam(required = false)
-				Saddle saddle,
-				@RequestParam(required = false)
-				Tire tire);	
+				Long bikeId
+//				@RequestParam(required = false)
+//				Frameset frameset,
+
+				);	
 		
 		//@formatter:on
 
-
+		List<Frameset> fetchFrameset(
+				@RequestParam(required = false)
+				Frameset frameset);
 		
+		
+		List<Color> fetchColor(	
+				@RequestParam(required = false)
+				Color color);
+		List<Drivetrain> fetchDrivetrain(	
+				@RequestParam(required = false)
+				Drivetrain drivetrain);
+		List<Handlebar> fetchHandlebar(	
+				@RequestParam(required = false)
+				Handlebar handlebar);
+		List<Saddle> fetchSaddle(	
+				@RequestParam(required = false)
+				Saddle saddle);
+		List<Tire> fetchTire(	
+				@RequestParam(required = false)
+				Tire tire);
 	}

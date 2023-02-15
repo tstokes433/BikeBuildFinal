@@ -30,8 +30,8 @@ private NamedParameterJdbcTemplate jdbcTemplate;
 	
 	@Override
 	
-	public List<Bike> fetchBike(Long bikeId, Frameset frameset, Color color, Drivetrain drivetrain, Handlebar handlebar, Saddle saddle, Tire tire) {
-		log.info(null, frameset, color, drivetrain, handlebar, saddle, tire);
+	public List<Bike> fetchBike(Long bikeId) {
+	//	log.info(null, bikeId);
 
 	// @formatter:off
 	String sql = ""
@@ -51,7 +51,7 @@ private NamedParameterJdbcTemplate jdbcTemplate;
 		public Bike mapRow(ResultSet rs, int rowNum) throws SQLException {
 			// @formatter:off
 			return Bike.builder()
-					.bikeId(rs.getLong("bikeId"))
+					.bikeId(rs.getLong("bike_pk"))
 					.frameset(Frameset.valueOf(rs.getString("frameset_id")))
 					.color(Color.valueOf(rs.getString("color_id")))
 					.drivetrain(Drivetrain.valueOf(rs.getString("drivetrain_id")))
@@ -62,6 +62,43 @@ private NamedParameterJdbcTemplate jdbcTemplate;
 			// formatter:on
 		}
 	});
+	}
+
+	@Override
+	public List<Frameset> fetchFrameset(Frameset frameset) {
+		// TODO Auto-generated method stub
+				return null;
+	
+	}
+
+	@Override
+	public List<Color> fetchColor(Color color) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Saddle> fetchSaddle(Saddle saddle) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Tire> fetchTire(Tire tire) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

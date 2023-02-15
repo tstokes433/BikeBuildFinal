@@ -23,6 +23,18 @@ public interface ReadBikeService {
 	 * @param tire
 	 * @return
 	 */
-	List<Bike> fetchBike(Frameset frameset, Color color, Drivetrain drivetrain, Handlebar handlebar, Saddle saddle, Tire tire);
+	List<Bike> fetchBike(Long bikeId);
+
+	List<Frameset> fetchFrameset(Frameset frameset);
+
+	List<Color> fetchColor(Color color);
+
+	List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain);
+
+	List<Handlebar> fetchHandlebar(Handlebar handlebar);
+
+	List<Saddle> fetchSaddle(Saddle saddle);
+
+	List<Tire> fetchTire(Tire tire);
 	
 }

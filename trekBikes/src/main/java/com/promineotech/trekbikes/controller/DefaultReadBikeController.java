@@ -18,10 +18,47 @@ public class DefaultReadBikeController implements ReadBikeController {
 
 	
 	@Override
-	public List<Bike> fetchBike(Frameset frameset, Color color, Drivetrain drivetrain, Handlebar handlebar,
-			Saddle saddle, Tire tire) {
-		log.info("frameset={}, color={}, drivetrain={}, handlebar={}, saddle={}, tire={}", frameset, color, drivetrain, handlebar, saddle, tire);
-		return readBikeService.fetchBike(frameset, color, drivetrain, handlebar, saddle, tire);
+	public List<Bike> fetchBike(Long bikeId)
+			 
+	{
+		log.info("bikeId={}", bikeId);
+		return readBikeService.fetchBike(bikeId);
+	}
+
+
+	@Override
+	public List<Frameset> fetchFrameset(Frameset frameset) {
+		return readBikeService.fetchFrameset(frameset);
+	}
+
+
+	@Override
+	public List<Color> fetchColor(Color color) {
+		return readBikeService.fetchColor(color);
+	}
+
+
+	@Override
+	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
+		return readBikeService.fetchDrivetrain(drivetrain);
+	}
+
+
+	@Override
+	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
+		return readBikeService.fetchHandlebar(handlebar);
+	}
+
+
+	@Override
+	public List<Saddle> fetchSaddle(Saddle saddle) {
+		return readBikeService.fetchSaddle(saddle);
+	}
+
+
+	@Override
+	public List<Tire> fetchTire(Tire tire) {
+		return readBikeService.fetchTire(tire);
 	}
 
 }

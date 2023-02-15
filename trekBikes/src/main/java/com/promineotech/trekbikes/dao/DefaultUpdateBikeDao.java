@@ -32,20 +32,20 @@ public class DefaultUpdateBikeDao implements UpdateBikeDao {
 			
 		//@formatter:off
 		String sql = ""
-				+ "UPDATE bike"
-				+"SET frameset = :frameset, color = :color, drivetrain = :drivetrain, handlebar = :handlebar, saddle = :saddle, tire = :tire "
+				+ "UPDATE bike "
+				+"SET frameset_id = :frameset_id, color_id = :color_id, drivetrain_id = :drivetrain_id, handlebar_id = :handlebar_id, saddle_id = :saddle_id, tire_id = :tire_id "
 				+"WHERE bike_pk = :bike_pk";
 		//@formatter:on
 		
 
 		Map<String, Object> params = new HashMap<>();
-		params.put("bike_pk", bikeId);
-		params.put("frameset", frameset);
-		params.put("color", color);
-		params.put("drivetrain", drivetrain);
-		params.put("handlebar", handlebar);
-		params.put("saddle", saddle);
-		params.put("tire", tire);
+		params.put("bike_pk", bikeId.toString());
+		params.put("frameset_id", frameset.toString());
+		params.put("color_id", color.toString());
+		params.put("drivetrain_id", drivetrain.toString());
+		params.put("handlebar_id", handlebar.toString());
+		params.put("saddle_id", saddle.toString());
+		params.put("tire_id", tire.toString());
 
 		jdbcTemplate.update(sql, params);
 		return Bike

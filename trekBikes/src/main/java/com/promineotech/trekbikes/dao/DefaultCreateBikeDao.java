@@ -36,16 +36,17 @@ public class DefaultCreateBikeDao implements CreateBikeDao {
 				+ "color_id, drivetrain_id, handlebar_id, saddle_id, tire_id"
 				+ ") VALUES ("
 				+ ":frameset_id, :color_id, :drivetrain_id, :handlebar_id, :saddle_id, :tire_id);";
+//INSERT INTO bike (frameset) VALUES ('VALUE');		
 		// @formatter:on
 		
 		Map<String, Object> params = new HashMap<>();
-		params.put("frameset_id", frameset);  
-		params.put("color_id", color);
-		params.put("drivetrain_id", drivetrain);
-		params.put("handlebar_id", handlebar);
-		params.put("saddle_id", saddle);
-		params.put("tire_id", tire);
-		
+		params.put("frameset_id", frameset.toString());  
+		params.put("color_id", color.toString());
+		params.put("drivetrain_id", drivetrain.toString());
+		params.put("handlebar_id", handlebar.toString());
+		params.put("saddle_id", saddle.toString());
+		params.put("tire_id", tire.toString());
+
 		jdbcTemplate.update(sql, params);
 		return Bike.builder()
 			// @formatter:off
