@@ -26,39 +26,39 @@ public class DefaultReadBikeController implements ReadBikeController {
 	}
 
 
-	@Override
-	public List<Frameset> fetchFrameset(Frameset frameset) {
-		return readBikeService.fetchFrameset(frameset);
-	}
-
-
-	@Override
-	public List<Color> fetchColor(Color color) {
-		return readBikeService.fetchColor(color);
-	}
-
-
-	@Override
-	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
-		return readBikeService.fetchDrivetrain(drivetrain);
-	}
-
-
-	@Override
-	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
-		return readBikeService.fetchHandlebar(handlebar);
-	}
-
-
-	@Override
-	public List<Saddle> fetchSaddle(Saddle saddle) {
-		return readBikeService.fetchSaddle(saddle);
-	}
-
-
-	@Override
-	public List<Tire> fetchTire(Tire tire) {
-		return readBikeService.fetchTire(tire);
-	}
+//	@Override
+//	public List<Frameset> fetchFrameset(Frameset frameset) {
+//		return readBikeService.fetchFrameset(frameset);
+//	}
+//
+//
+//	@Override
+//	public List<Color> fetchColor(Color color) {
+//		return readBikeService.fetchColor(color);
+//	}
+//
+//
+//	@Override
+//	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
+//		return readBikeService.fetchDrivetrain(drivetrain);
+//	}
+//
+//
+//	@Override
+//	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
+//		return readBikeService.fetchHandlebar(handlebar);
+//	}
+//
+//
+//	@Override
+//	public List<Saddle> fetchSaddle(Saddle saddle) {
+//		return readBikeService.fetchSaddle(saddle);
+//	}
+//
+//
+//	@Override
+//	public List<Tire> fetchTire(Tire tire) {
+//		return readBikeService.fetchTire(tire);
+//	}
 
 }

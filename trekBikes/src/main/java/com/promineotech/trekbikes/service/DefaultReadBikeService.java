@@ -20,36 +20,36 @@ public class DefaultReadBikeService implements ReadBikeService {
 		log.info("fetchBike has been called for bikeId={}", bikeId);
 		return readBikeDao.fetchBike(bikeId);
 	}
-	@Override
-	public List<Frameset> fetchFrameset(Frameset frameset) {
-		//log.info("fetchBike has been called for bikeId={}", frameset);
-		return readBikeDao.fetchFrameset(frameset);
-	}
-	@Override
-	public List<Color> fetchColor(Color color) {
-		//log.info("fetchBike has been called for bikeId={}", color);
-		return readBikeDao.fetchColor(color);
-	}
-	@Override
-	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
-		//log.info("fetchBike has been called for bikeId={}", bikeId);
-		return readBikeDao.fetchDrivetrain(drivetrain);
-	}
-	@Override
-	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
-		//log.info("fetchBike has been called for bikeId={}", bikeId);
-		return readBikeDao.fetchHandlebar(handlebar);
-	}
-	@Override
-	public List<Saddle> fetchSaddle(Saddle saddle) {
-		//log.info("fetchBike has been called for bikeId={}", bikeId);
-		return readBikeDao.fetchSaddle(saddle);
-	}
-	@Override
-	public List<Tire> fetchTire(Tire tire) {
-		//log.info("fetchBike has been called for bikeId={}", bikeId);
-		return readBikeDao.fetchTire(tire);
-	}
+//	@Override
+//	public List<Frameset> fetchFrameset(Frameset frameset) {
+//		//log.info("fetchBike has been called for bikeId={}", frameset);
+//		return readBikeDao.fetchFrameset(frameset);
+//	}
+//	@Override
+//	public List<Color> fetchColor(Color color) {
+//		//log.info("fetchBike has been called for bikeId={}", color);
+//		return readBikeDao.fetchColor(color);
+//	}
+//	@Override
+//	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
+//		//log.info("fetchBike has been called for bikeId={}", bikeId);
+//		return readBikeDao.fetchDrivetrain(drivetrain);
+//	}
+//	@Override
+//	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
+//		//log.info("fetchBike has been called for bikeId={}", bikeId);
+//		return readBikeDao.fetchHandlebar(handlebar);
+//	}
+//	@Override
+//	public List<Saddle> fetchSaddle(Saddle saddle) {
+//		//log.info("fetchBike has been called for bikeId={}", bikeId);
+//		return readBikeDao.fetchSaddle(saddle);
+//	}
+//	@Override
+//	public List<Tire> fetchTire(Tire tire) {
+//		//log.info("fetchBike has been called for bikeId={}", bikeId);
+//		return readBikeDao.fetchTire(tire);
+//	}
 
 	
 }

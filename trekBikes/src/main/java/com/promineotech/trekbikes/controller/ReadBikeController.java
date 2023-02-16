@@ -2,13 +2,8 @@ package com.promineotech.trekbikes.controller;
 
 import java.util.List;
 
-import com.promineotech.trekbikes.entity.Bike;
-import com.promineotech.trekbikes.entity.Color;
-import com.promineotech.trekbikes.entity.Drivetrain;
-import com.promineotech.trekbikes.entity.Frameset;
-import com.promineotech.trekbikes.entity.Handlebar;
-import com.promineotech.trekbikes.entity.Saddle;
-import com.promineotech.trekbikes.entity.Tire;
+import com.promineotech.trekbikes.entity.*;
+
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.http.HttpStatus;
@@ -81,34 +76,33 @@ public interface ReadBikeController {
 //		Order createOrder(@Valid @RequestBody OrderRequest orderRequest);
 
 		List<Bike> fetchBike(
-				//);
 				@RequestParam(required = false)
-				Long bikeId
+				Long bikeId);	
+		
+//		
+//		List<Frameset> fetchFrameset(
 //				@RequestParam(required = false)
-//				Frameset frameset,
-
-				);	
+//				Frameset frameset);
+//		
+//		List<Color> fetchColor(	
+//				@RequestParam(required = false)
+//				Color color);
+//		
+//		List<Drivetrain> fetchDrivetrain(	
+//				@RequestParam(required = false)
+//				Drivetrain drivetrain);
+//		
+//		List<Handlebar> fetchHandlebar(	
+//				@RequestParam(required = false)
+//				Handlebar handlebar);
+//		
+//		List<Saddle> fetchSaddle(	
+//				@RequestParam(required = false)
+//				Saddle saddle);
+//		
+//		List<Tire> fetchTire(	
+//				@RequestParam(required = false)
+//				Tire tire);
 		
 		//@formatter:on
-
-		List<Frameset> fetchFrameset(
-				@RequestParam(required = false)
-				Frameset frameset);
-		
-		
-		List<Color> fetchColor(	
-				@RequestParam(required = false)
-				Color color);
-		List<Drivetrain> fetchDrivetrain(	
-				@RequestParam(required = false)
-				Drivetrain drivetrain);
-		List<Handlebar> fetchHandlebar(	
-				@RequestParam(required = false)
-				Handlebar handlebar);
-		List<Saddle> fetchSaddle(	
-				@RequestParam(required = false)
-				Saddle saddle);
-		List<Tire> fetchTire(	
-				@RequestParam(required = false)
-				Tire tire);
 	}

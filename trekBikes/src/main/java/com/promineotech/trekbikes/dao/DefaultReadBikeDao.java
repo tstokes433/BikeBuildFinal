@@ -11,18 +11,12 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import com.promineotech.trekbikes.entity.Bike;
-import com.promineotech.trekbikes.entity.Color;
-import com.promineotech.trekbikes.entity.Drivetrain;
-import com.promineotech.trekbikes.entity.Frameset;
-import com.promineotech.trekbikes.entity.Handlebar;
-import com.promineotech.trekbikes.entity.Saddle;
-import com.promineotech.trekbikes.entity.Tire;
+import com.promineotech.trekbikes.entity.*;
 
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 @Component
-@Slf4j
+//@Slf4j
 public class DefaultReadBikeDao implements ReadBikeDao {
 	
 @Autowired
@@ -64,42 +58,66 @@ private NamedParameterJdbcTemplate jdbcTemplate;
 	});
 	}
 
-	@Override
-	public List<Frameset> fetchFrameset(Frameset frameset) {
-		// TODO Auto-generated method stub
-				return null;
-	
-	}
+//	@Override
+//	public List<Frameset> fetchFrameset(Frameset frameset) {
+//		//	log.info(null, bikeId);
+//
+//		// @formatter:off
+//		String sql = ""
+//				+ "SELECT * "
+//				+ "FROM frameset "
+//				+ "WHERE frameset_pk = :frameset_pk";
+//		// @formatter:on
+//		
+//		Map<String, Object> params = new HashMap<>();
+//		params.put("frameset_pk", frameset);
+//
+//		
+//		return jdbcTemplate.query(sql, params, new RowMapper<>(){
+//
 
-	@Override
-	public List<Color> fetchColor(Color color) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Saddle> fetchSaddle(Saddle saddle) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Tire> fetchTire(Tire tire) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//			@Override
+//			public Frameset mapRow(ResultSet rs, int rowNum) throws SQLException {
+//				// @formatter:off
+//				return Frameset.builder()
+//						.bikeId(rs.getLong("bike_pk"))
+//						.frameset(Frameset.valueOf(rs.getString("frameset_id")))
+//						.build();
+//				// formatter:on
+//			}
+//		});
+//	
+//	}
+//
+//	@Override
+//	public List<Color> fetchColor(Color color) {
+//		// TODO Auto-generated method stub
+//				return null;
+//	}
+//
+//	@Override
+//	public List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<Handlebar> fetchHandlebar(Handlebar handlebar) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<Saddle> fetchSaddle(Saddle saddle) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<Tire> fetchTire(Tire tire) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 
 }

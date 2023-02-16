@@ -17,8 +17,3 @@ public class TrekBikes extends SpringBootServletInitializer
 	}
 	
 }
-//Layers: controller (Swagger) ,DAO, Service, Entity
-//Full CRDU on one: CRUD on Saddle, read on REST
-//COntrollers: 1 controller per entity or on controller for each part of CRUD
-//1 per entity: easy control on each individule entity, easly to debug, more endpoints
-//1 per CRUD, only 4 endpoints, but harder to debug/make flexible
