@@ -79,30 +79,251 @@ public interface ReadBikeController {
 				@RequestParam(required = false)
 				Long bikeId);	
 		
-//		
-//		List<Frameset> fetchFrameset(
-//				@RequestParam(required = false)
-//				Frameset frameset);
-//		
-//		List<Color> fetchColor(	
-//				@RequestParam(required = false)
-//				Color color);
-//		
-//		List<Drivetrain> fetchDrivetrain(	
-//				@RequestParam(required = false)
-//				Drivetrain drivetrain);
-//		
-//		List<Handlebar> fetchHandlebar(	
-//				@RequestParam(required = false)
-//				Handlebar handlebar);
-//		
-//		List<Saddle> fetchSaddle(	
-//				@RequestParam(required = false)
-//				Saddle saddle);
-//		
-//		List<Tire> fetchTire(	
-//				@RequestParam(required = false)
-//				Tire tire);
 		
-		//@formatter:on
+
+
+	//DO BELOW FO ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	// Method for Frameset
+			//@formatter:off
+			@Operation(
+				summary = "Returns a list of Trek Bike components (frameset)",
+				description = "Returns a list of tires",
+				responses = {
+										
+			@ApiResponse(responseCode = "200",
+				description = "The list of Bike options is returned",
+				content = @Content(
+				mediaType = "application/json",
+				schema = @Schema(
+				implementation = Frameset.class))),
+										
+			@ApiResponse(responseCode = "400",
+				description = "The request parameters are invalid",
+				content = @Content(
+				mediaType = "application/json")),
+										
+			@ApiResponse(responseCode = "404",
+				description = "No Bike component were found with the input criteria",
+				content = @Content(
+				mediaType = "application/json")),
+										
+			@ApiResponse(responseCode = "500",
+				description = "An unplanned error occured.",
+				content = @Content(
+				mediaType = "application/json"))
+			}
+			)
+								
+			@GetMapping(value = "/fetchFrameset")
+			@ResponseStatus(code = HttpStatus.OK)
+			List<Frameset> fetchFrameset();
+								
+			//@formatter:on
+					
+	//DO ABOVE FOR ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!
+								
+								
+		//DO BELOW FO ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	// Method for Color
+			//@formatter:off
+			@Operation(
+				summary = "Returns a list of Trek Bike components (color)",
+				description = "Returns a list of tires",
+				responses = {
+													
+			@ApiResponse(responseCode = "200",
+				description = "The list of Bike options is returned",
+				content = @Content(
+				mediaType = "application/json",
+				schema = @Schema(
+				implementation = Color.class))),
+													
+			@ApiResponse(responseCode = "400",
+				description = "The request parameters are invalid",
+				content = @Content(
+				mediaType = "application/json")),
+													
+			@ApiResponse(responseCode = "404",
+				description = "No Bike component were found with the input criteria",
+				content = @Content(
+				mediaType = "application/json")),
+													
+			@ApiResponse(responseCode = "500",
+				description = "An unplanned error occured.",
+				content = @Content(
+				mediaType = "application/json"))
+			}
+			)
+											
+			@GetMapping(value = "/fetchColor")
+			@ResponseStatus(code = HttpStatus.OK)
+			List<Color> fetchColor();
+											
+			//@formatter:on
+								
+	//DO ABOVE FOR ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!
+											
+											
+											
+											
+	//DO BELOW FO ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// Method for Drivetrain
+	//@formatter:off
+			@Operation(
+				summary = "Returns a list of Trek Bike components (drivetrain)",
+				description = "Returns a list of tires",
+				responses = {
+																
+			@ApiResponse(responseCode = "200",
+				description = "The list of Bike options is returned",
+				content = @Content(
+				mediaType = "application/json",
+				schema = @Schema(
+				implementation = Drivetrain.class))),
+																
+			@ApiResponse(responseCode = "400",
+				description = "The request parameters are invalid",
+				content = @Content(
+				mediaType = "application/json")),
+																
+			@ApiResponse(responseCode = "404",
+				description = "No Bike component were found with the input criteria",
+				content = @Content(
+				mediaType = "application/json")),
+																
+			@ApiResponse(responseCode = "500",
+				description = "An unplanned error occured.",
+				content = @Content(
+				mediaType = "application/json"))
+		}
+		)
+														
+			@GetMapping(value = "/fetchDrivetrain")
+			@ResponseStatus(code = HttpStatus.OK)
+				List<Drivetrain> fetchDrivetrain();
+														
+			//@formatter:on
+	//DO ABOVE FOR ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!
+					
+	//DO BELOW FO ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// Method for Handlebar
+			//@formatter:off
+			@Operation(
+				summary = "Returns a list of Trek Bike components (handlebar)",
+				description = "Returns a list of tires",
+				responses = {
+																			
+			@ApiResponse(responseCode = "200",
+				description = "The list of Bike options is returned",
+				content = @Content(
+				mediaType = "application/json",
+				schema = @Schema(
+				implementation = Handlebar.class))),
+																			
+			@ApiResponse(responseCode = "400",
+				description = "The request parameters are invalid",
+				content = @Content(
+				mediaType = "application/json")),
+																			
+			@ApiResponse(responseCode = "404",
+				description = "No Bike component were found with the input criteria",
+				content = @Content(
+				mediaType = "application/json")),
+																			
+			@ApiResponse(responseCode = "500",
+				description = "An unplanned error occured.",
+				content = @Content(
+				mediaType = "application/json"))
+	}
+		)
+																	
+			@GetMapping(value = "/fetchHandlebar")
+			@ResponseStatus(code = HttpStatus.OK)
+			List<Handlebar> fetchHandlebar();
+																	
+			//@formatter:on
+													
+	//DO ABOVE FOR ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!					
+					
+					
+	//DO BELOW FOr ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// Method for Saddle
+			//@formatter:off
+			@Operation(
+				summary = "Returns a list of Trek Bike components (saddle)",
+				description = "Returns a list of tires",
+				responses = {
+																						
+			@ApiResponse(responseCode = "200",
+				description = "The list of Bike options is returned",
+				content = @Content(
+				mediaType = "application/json",
+				schema = @Schema(
+				implementation = Saddle.class))),
+																						
+			@ApiResponse(responseCode = "400",
+				description = "The request parameters are invalid",
+				content = @Content(
+				mediaType = "application/json")),
+																						
+			@ApiResponse(responseCode = "404",
+				description = "No Bike component were found with the input criteria",
+				content = @Content(
+				mediaType = "application/json")),
+																						
+			@ApiResponse(responseCode = "500",
+				description = "An unplanned error occured.",
+				content = @Content(
+				mediaType = "application/json"))
+		}
+			)
+																				
+			@GetMapping(value = "/fetchSaddle")
+			@ResponseStatus(code = HttpStatus.OK)
+				List<Saddle> fetchSaddle();
+																				
+																				//@formatter:on
+																	
+											//DO ABOVE FOR ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!
+		//DO BELOW FO ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// Method for Tire
+			//@formatter:off
+			@Operation(
+				summary = "Returns a list of Trek Bike components (tires)",
+				description = "Returns a list of tires",
+				responses = {
+																						
+				@ApiResponse(responseCode = "200",
+					description = "The list of Bike options is returned",
+					content = @Content(
+					mediaType = "application/json",
+					schema = @Schema(
+					implementation = Tire.class))),
+																							
+				@ApiResponse(responseCode = "400",
+					description = "The request parameters are invalid",
+					content = @Content(
+					mediaType = "application/json")),
+																									
+				@ApiResponse(responseCode = "404",
+					description = "No Bike component were found with the input criteria",
+					content = @Content(
+					mediaType = "application/json")),
+																									
+				@ApiResponse(responseCode = "500",
+					description = "An unplanned error occured.",
+					content = @Content(
+					mediaType = "application/json"))
+				}
+						)
+																							
+				@GetMapping(value = "/fetchTire")
+				@ResponseStatus(code = HttpStatus.OK)
+					List<Tire> fetchTire();
+																							
+			//@formatter:on
+																				
+		//DO ABOVE FOR ALL COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!		
+																				
+
 	}

@@ -20,7 +20,48 @@ public class DefaultReadBikeService implements ReadBikeService {
 		log.info("fetchBike has been called for bikeId={}", bikeId);
 		return readBikeDao.fetchBike(bikeId);
 	}
-//	@Override
+
+	
+
+		@Override
+		public List<Frameset> fetchFrameset() {
+			log.info("fetchFrameset has been called");
+			return readBikeDao.fetchFrameset();
+		}
+
+
+
+		@Override
+		public List<Color> fetchColor() {
+			log.info("fetchColor has been called");
+			return readBikeDao.fetchColor();
+		}
+
+		@Override
+		public List<Drivetrain> fetchDrivetrain() {
+			log.info("fetchDrivetrain has been called");
+			return readBikeDao.fetchDrivetrain();
+		}
+
+		@Override
+		public List<Handlebar> fetchHandlebar() {
+			log.info("fetchHandlebar has been called");
+			return readBikeDao.fetchHandlebar();
+		}
+
+		@Override
+		public List<Saddle> fetchSaddle() {
+			log.info("fetchSaddle has been called");
+			return readBikeDao.fetchSaddle();
+			}
+
+		@Override
+		public List<Tire> fetchTire() {
+			log.info("fetchBike has been called");
+			return readBikeDao.fetchTire();
+		}
+	//END	
+//@Override
 //	public List<Frameset> fetchFrameset(Frameset frameset) {
 //		//log.info("fetchBike has been called for bikeId={}", frameset);
 //		return readBikeDao.fetchFrameset(frameset);

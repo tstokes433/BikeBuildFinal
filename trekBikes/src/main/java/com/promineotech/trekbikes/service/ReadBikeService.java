@@ -19,16 +19,16 @@ public interface ReadBikeService {
 	 */
 	List<Bike> fetchBike(Long bikeId);
 
-//	List<Frameset> fetchFrameset(Frameset frameset);
-//
-//	List<Color> fetchColor(Color color);
-//
-//	List<Drivetrain> fetchDrivetrain(Drivetrain drivetrain);
-//
-//	List<Handlebar> fetchHandlebar(Handlebar handlebar);
-//
-//	List<Saddle> fetchSaddle(Saddle saddle);
-//
-//	List<Tire> fetchTire(Tire tire);
-//	
+	List<Frameset> fetchFrameset();
+
+	List<Color> fetchColor();
+
+	List<Drivetrain> fetchDrivetrain();
+
+	List<Handlebar> fetchHandlebar();
+
+	List<Saddle> fetchSaddle();
+
+	List<Tire> fetchTire();
+	
 }
